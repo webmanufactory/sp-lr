@@ -12688,17 +12688,6 @@ body.modal-open {
     margin-bottom: 1.25rem
 }
 
-.service-appoint .container {
-    position: relative;
-    overflow: hidden;
-    padding: 0 2.5rem 2.5rem
-}
-
-@media (max-width: 991.98px) {
-    .service-appoint .container {
-        padding:0
-    }
-}
 
 @media (max-width: 991.98px) {
     .service-appoint .container:after {
@@ -18660,8 +18649,10 @@ main {
     text-transform: uppercase;
     color: #000;
     background-color: #ffe500;
+    z-index: 1;
 }
 .special-offer__order-wrap {
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18772,6 +18763,8 @@ main {
 .diagnostic-review__select {
     position: absolute;
     top: 35%;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
     box-shadow: 0 0 10px 2px #c4c4c4;
     z-index: 1;
@@ -18824,6 +18817,7 @@ main {
     font-weight: bold;
     line-height: 1.5;
 }
+
 /* заменить в основном файле */
 .prices__heading {
     font-weight: 700;
@@ -18913,11 +18907,6 @@ main {
 .service-appoint {
     position: relative;
 }
-.service-appoint .container {
-    position: initial;
-    overflow: initial;
-    padding: 0;
-}
 .service-appoint__master-wrap {
     display: flex;
     flex-direction: column;
@@ -18942,4 +18931,80 @@ main {
     max-width: 360px;
     width: 100%;
     height: auto;
+}
+.service-appoint .container {
+    /*delete*/
+}
+
+@media (max-width: 1200px) {
+    .special-offer__order-wrap {
+        justify-content: flex-end;
+    }
+    .offer-order__title {
+        font-size: 20px;
+    }
+    .service-appoint__master-img {
+        max-width: 200px;
+    }
+}
+@media (max-width: 992px) {
+    .offer-info__label {
+        width: 180px;
+    }
+    .offer-info__title,
+    .offer-info__price {
+        font-size: 18px;
+    }
+    .special-offer__info {
+        padding: 60px 15px;
+        width: 400px;
+    }
+    .special-offer__info::after {
+        border-width: 320px 100px 0 0;
+    }
+    .car-review__rating {
+        text-align: center;
+    }
+    .service-appoint__master-wrap {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .special-offer__wrap {
+        flex-direction: column;
+    }
+    .special-offer__info {
+        padding: 30px;
+        max-width: 100%;
+        width: 100%;
+        height: initial;
+    }
+    .special-offer__info::after {
+        display: none;
+    }
+    .special-offer__order-wrap {
+        padding: 30px;
+        justify-content: flex-start;
+        max-width: 100%;
+        width: 100%;
+        height: initial;
+    }
+    .offer-order__title {
+        margin-bottom: 15px;
+    }
+    .offer-info__label {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .diagnostic-review__select {
+        top: -60px;
+    }
+    .diagnostic-review__select--next {
+        left: initial;
+        right: 25px;
+    }
+    .diagnostic-review__select--prev {
+        right: 0;
+        left: 25px;
+    }
 }
