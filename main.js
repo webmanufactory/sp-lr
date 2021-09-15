@@ -34,4 +34,14 @@ $(document).ready(function () {
         }
         ]
     });
+    if ($(window).width() < 767) {
+        $('.contacts__team-cards').slick({
+            centerMode: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            centerPadding: '20px',
+        })
+    }
 });
